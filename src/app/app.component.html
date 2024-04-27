@@ -1,16 +1,17 @@
-<div>
-  <div class="header">
-    <app-header></app-header>
-  </div>
-  <div class="main-body">
-    <div class="side-nav">
-      <app-sidenav></app-sidenav>
-    </div>
-    <div class="main">
-      <app-main></app-main>
-    </div>
-  </div>
-  <div class="footer">
-    <app-footer></app-footer>
-  </div>
+<div class="container">
+  <h1>Data Binding</h1>
+  <h2>String Interpolation</h2>
+  <span>My name is {{ firstName}}</span>
+
+
+  <hr>
+
+  <h2>Event Binding</h2>
+  <input type="text" (input)="valueToComponent($event)">
+
+
+  <h2>Two way Binding</h2>
+  <!-- <input type="text" [value]="defaultVal" (input)="changeValue($event)"> -->
+  <input type="text" [(ngModel)]="defaultVal">
+  <span>{{defaultVal}}</span>
 </div>
